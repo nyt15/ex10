@@ -1,0 +1,95 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do ex10_top_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+H:/verilog/subdemos {H:/verilog/subdemos/spi2dac_v3.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module spi2dac_v3
+# 
+# Top level modules:
+# 	spi2dac_v3
+# 
+do ./tb.do
+# ** Error: (vish-4008) Object 'sysclk' not found.
+# Error in macro ././tb.do line 8
+# ** Error: (vish-4008) Object 'sysclk' not found.
+# 
+#     while executing
+# "force sysclk 1 0, 0 10ns -r 20ns"
+view source
+ls
+# ex10_top.sft
+# ex10_top.vo
+# ex10_top_modelsim.xrf
+# ex10_top_run_msim_rtl_verilog.do
+# ex10_top_run_msim_rtl_verilog.do.bak
+# modelsim.ini
+# msim_transcript
+# rtl_work
+# tb.do
+tb.do
+# couldn't execute ".\tb.do": no such file or directory
+less tb.do
+# add wave -position end  sysclk
+# add wave -position end -hexadecimal data_in
+# add wave -position end load
+# add wave -position end  dac_sdi
+# add wave -position end  dac_cs
+# add wave -position end  dac_sck
+# add wave -position end  dac_ld
+# force sysclk 1 0, 0 10ns -r 20ns
+# force data_in 10'h23b
+# force load 0
+# run 200ns
+# force load 1
+# run 400ns
+# force load 0
+# run 20us
+# 
+# 
+pwd
+# H:/verilog/ex10/simulation/modelsim
+ls
+# ex10_top.sft
+# ex10_top.vo
+# ex10_top_modelsim.xrf
+# ex10_top_run_msim_rtl_verilog.do
+# ex10_top_run_msim_rtl_verilog.do.bak
+# modelsim.ini
+# msim_transcript
+# rtl_work
+# tb.do
+./tb.do
+# couldn't execute ".\tb.do": no such file or directory
+tb tb.do
+# Active logfile is not in simulation mode
+pwd
+# H:/verilog/ex10/simulation/modelsim
+ls
+# ex10_top.sft
+# ex10_top.vo
+# ex10_top_modelsim.xrf
+# ex10_top_run_msim_rtl_verilog.do
+# ex10_top_run_msim_rtl_verilog.do.bak
+# modelsim.ini
+# msim_transcript
+# rtl_work
+# tb.do
+restart
+# No Design Loaded!
+vsim ex10_top.vo
+# OpenFile ex10_top.vo 
+vsim work.spi2dac_v3
+# vsim work.spi2dac_v3 
+# Loading work.spi2dac_v3
+./tb.do
+# couldn't execute ".\tb.do": no such file or directory
+do ./tb.do
